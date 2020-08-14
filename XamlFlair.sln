@@ -613,6 +613,7 @@ Global
 		{7982F1D6-91D8-48AA-9A1C-5128502E846E}.Debug|iPhoneSimulator.Build.0 = Debug|iPhoneSimulator
 		{7982F1D6-91D8-48AA-9A1C-5128502E846E}.Debug|x64.ActiveCfg = Debug|iPhoneSimulator
 		{7982F1D6-91D8-48AA-9A1C-5128502E846E}.Debug|x86.ActiveCfg = Debug|iPhoneSimulator
+		{7982F1D6-91D8-48AA-9A1C-5128502E846E}.Debug|x86.Build.0 = Debug|iPhoneSimulator
 		{7982F1D6-91D8-48AA-9A1C-5128502E846E}.Release|Any CPU.ActiveCfg = Release|iPhoneSimulator
 		{7982F1D6-91D8-48AA-9A1C-5128502E846E}.Release|ARM.ActiveCfg = Release|iPhoneSimulator
 		{7982F1D6-91D8-48AA-9A1C-5128502E846E}.Release|ARM64.ActiveCfg = Release|iPhoneSimulator
