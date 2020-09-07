@@ -173,7 +173,7 @@ namespace XamlFlair.Extensions
 			Color fromColor = Colors.Transparent;
 			var propertyPath = string.Empty;
 
-			switch (settings.ColorTarget)
+			switch (settings.ColorOn)
 			{
 				case ColorTarget.Background when element is Control ctl && ctl.Background is SolidColorBrush brush:
 					propertyPath = "(Control.Background).(SolidColorBrush.Color)";
@@ -219,7 +219,7 @@ namespace XamlFlair.Extensions
 			Color toColor = Colors.Transparent;
 			var propertyPath = string.Empty;
 
-			switch (settings.ColorTarget)
+			switch (settings.ColorOn)
 			{
 				case ColorTarget.Background when element is Control ctl:
 					propertyPath = "(Control.Background).(SolidColorBrush.Color)";

@@ -234,18 +234,18 @@ namespace XamlFlair
 				typeof(AnimationSettings),
 				new PropertyMetadata(Colors.Transparent));
 
-		public ColorTarget ColorTarget
+		public ColorTarget ColorOn
 		{
-			get => (ColorTarget)GetValue(ColorTargetProperty);
-			set => SetValue(ColorTargetProperty, value);
+			get => (ColorTarget)GetValue(ColorOnProperty);
+			set => SetValue(ColorOnProperty, value);
 		}
 
 		/// <summary>
 		/// Specifies the target property for a color animation
 		/// </summary>
-		public static readonly DependencyProperty ColorTargetProperty =
+		public static readonly DependencyProperty ColorOnProperty =
 			DependencyProperty.Register(
-				nameof(ColorTarget),
+				nameof(ColorOn),
 				typeof(ColorTarget),
 				typeof(AnimationSettings),
 				new PropertyMetadata(ColorTarget.Background));
@@ -424,7 +424,7 @@ namespace XamlFlair
 #if WINDOWS_UWP || HAS_UNO || __WPF__
 		public Color Color { get; set; } = Colors.Transparent;
 
-		public ColorTarget ColorTarget { get; set; } = ColorTarget.Background;
+		public ColorTarget ColorOn { get; set; } = ColorTarget.Background;
 #endif
 
 		// Blur not supported on Uno
@@ -478,7 +478,7 @@ namespace XamlFlair
 // ColorAnimation supported only on Uno and WPF (not on native UWP due to Composition-only implementations)
 #if WINDOWS_UWP || HAS_UNO || __WPF__
 				&& other.Color.Equals(Color)
-				&& other.ColorTarget.Equals(ColorTarget)
+				&& other.ColorOn.Equals(ColorOn)
 #endif
 #if !HAS_UNO
 				&& other.BlurRadius.Equals(BlurRadius)
@@ -545,7 +545,7 @@ namespace XamlFlair
 // ColorAnimation supported only on Uno and WPF (not on native UWP due to Composition-only implementations)
 #if WINDOWS_UWP || HAS_UNO || __WPF__
 				hash = (hash * HashingMultiplier) ^ (!Object.ReferenceEquals(null, Color) ? Color.GetHashCode() : 0);
-				hash = (hash * HashingMultiplier) ^ (!Object.ReferenceEquals(null, ColorTarget) ? ColorTarget.GetHashCode() : 0);
+				hash = (hash * HashingMultiplier) ^ (!Object.ReferenceEquals(null, ColorOn) ? ColorOn.GetHashCode() : 0);
 #endif
 #if !HAS_UNO
 				hash = (hash * HashingMultiplier) ^ (!Object.ReferenceEquals(null, BlurRadius) ? BlurRadius.GetHashCode() : 0);

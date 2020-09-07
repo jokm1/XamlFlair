@@ -106,7 +106,7 @@ namespace XamlFlair
 		/// <summary>
 		/// Specifies the target property for a color animation
 		/// </summary>
-		public ColorTarget ColorTarget { get; set; } = DefaultSettings.ColorTarget;
+		public ColorTarget ColorOn { get; set; } = DefaultSettings.ColorOn;
 #endif
 
 		// Blur not supported on Uno
@@ -203,7 +203,7 @@ namespace XamlFlair
 // ColorAnimation supported only on Uno and WPF (not on native UWP due to Composition-only implementations)
 #if WINDOWS_UWP || HAS_UNO || __WPF__
 				Color = Color,
-				ColorTarget = ColorTarget,
+				ColorOn = ColorOn,
 #endif
 			};
 

@@ -29,7 +29,7 @@ namespace XamlFlair
 // ColorAnimation supported only on Uno and WPF (not on native UWP due to Composition-only implementations)
 #if WINDOWS_UWP || HAS_UNO || __WPF__
 		internal static readonly Color DEFAULT_COLOR = Colors.Transparent;
-		internal static readonly ColorTarget DEFAULT_COLOR_TARGET = ColorTarget.Background;
+		internal static readonly ColorTarget DEFAULT_COLOR_ON = ColorTarget.Background;
 #endif
 
 #if __WPF__
@@ -52,7 +52,7 @@ namespace XamlFlair
 		// ColorAnimation supported only on Uno and WPF (not on native UWP due to Composition-only implementations)
 #if WINDOWS_UWP || HAS_UNO || __WPF__
 		internal static Color Color { get; set; } = DEFAULT_COLOR;
-		internal static ColorTarget ColorTarget { get; set; } = DEFAULT_COLOR_TARGET;
+		internal static ColorTarget ColorOn { get; set; } = DEFAULT_COLOR_ON;
 #endif
 
 #if __WPF__

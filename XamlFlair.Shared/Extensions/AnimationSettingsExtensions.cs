@@ -107,8 +107,8 @@ namespace XamlFlair.Extensions
 			var color = other.Color;
 			updated.Color = color != DefaultSettings.Color ? color : settings.Color;
 
-			var colorTarget = other.ColorTarget;
-			updated.ColorTarget = colorTarget != DefaultSettings.ColorTarget ? colorTarget : settings.ColorTarget;
+			var colorTarget = other.ColorOn;
+			updated.ColorOn = colorTarget != DefaultSettings.ColorOn ? colorTarget : settings.ColorOn;
 #endif
 			// Blur not supported on Uno
 #if !HAS_UNO

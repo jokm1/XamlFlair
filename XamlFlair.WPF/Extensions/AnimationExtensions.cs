@@ -217,40 +217,34 @@ namespace XamlFlair.Extensions
 			Color fromColor = Colors.Transparent;
 			var propertyPath = string.Empty;
 
-			switch (settings.ColorTarget)
+			switch (settings.ColorOn)
 			{
 				case ColorTarget.Background when element is Control ctl && ctl.Background is SolidColorBrush brush:
-					// https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.controls.control.background?view=winrt-19041
 					propertyPath = "(Control.Background).(SolidColorBrush.Color)";
 					fromColor = brush.Color;
 					break;
 
 				case ColorTarget.Foreground when element is Control ctl && ctl.Foreground is SolidColorBrush brush:
-					// https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.controls.control.foreground?view=winrt-19041
 					propertyPath = "(Control.Foreground).(SolidColorBrush.Color)";
 					fromColor = brush.Color;
 					break;
 
 				case ColorTarget.BorderBrush when element is Control ctl && ctl.BorderBrush is SolidColorBrush brush:
-					// https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.controls.control.borderbrush?view=winrt-19041
 					propertyPath = "(Control.BorderBrush).(SolidColorBrush.Color)";
 					fromColor = brush.Color;
 					break;
 
 				case ColorTarget.Foreground when element is TextBlock tb && tb.Foreground is SolidColorBrush brush:
-					// https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.controls.textblock.foreground?view=winrt-19041
 					propertyPath = "(TextBlock.Foreground).(SolidColorBrush.Color)";
 					fromColor = brush.Color;
 					break;
 
 				case ColorTarget.Fill when element is Shape shp && shp.Fill is SolidColorBrush brush:
-					// https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.shapes.shape.fill?view=winrt-19041
 					propertyPath = "(Shape.Fill).(SolidColorBrush.Color)";
 					fromColor = brush.Color;
 					break;
 
 				case ColorTarget.Stroke when element is Shape shp && shp.Stroke is SolidColorBrush brush:
-					// https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.shapes.shape.stroke?view=winrt-19041
 					propertyPath = "(Shape.Stroke).(SolidColorBrush.Color)";
 					fromColor = brush.Color;
 					break;
@@ -269,7 +263,7 @@ namespace XamlFlair.Extensions
 			Color toColor = Colors.Transparent;
 			var propertyPath = string.Empty;
 
-			switch (settings.ColorTarget)
+			switch (settings.ColorOn)
 			{
 				case ColorTarget.Background when element is Control ctl:
 					propertyPath = "(Control.Background).(SolidColorBrush.Color)";
